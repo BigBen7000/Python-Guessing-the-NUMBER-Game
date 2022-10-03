@@ -1,10 +1,19 @@
 import random
+import os
+
+# generates a random number
 randNumber = random.randint(1, 100)
+
 userGuess = None
 guesses = 0
 
+# clears the screen
+os.system('cls')
+
+# loop
 while(userGuess != randNumber):
-    userGuess = int(input("Enter your guess: "))
+    print("Enter your guess:")
+    userGuess = int(input("> "))
     guesses += 1
     if(userGuess==randNumber):
         print("You guessed it right!")
